@@ -7,17 +7,16 @@ var video_out = document.getElementById("vid-box");
 var vid_thumb = document.getElementById("vid-thumb");
 
 function login(form) {
-    alert("here");
     var phone = window.phone = PHONE({
         number        : form.username.value || "Anonymous",
         publish_key   : 'pub-c-9df37493-406f-4ccd-8200-8ea58cb55aea',
         subscribe_key : 'sub-c-8a9be808-8fb3-11e5-b303-0619f8945a4f'
     });
 
-    phone.ready(function(){form.username.style.background="#55ff5b"; });
+    phone.ready(function(){alert("here");form.username.style.background="#55ff5b";});
     phone.receive(function(session){
         session.connected(function(session) { video_out.appendChild(session.video); showModal();});
-        session.ended(function(session) { video_out.innerHTML='';});
+        session.ended(function(session) { video_out.innerHTML=''; });
     });
     return false;
 }
