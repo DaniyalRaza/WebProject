@@ -12,12 +12,12 @@ function login(form) {
         publish_key   : 'pub-c-9df37493-406f-4ccd-8200-8ea58cb55aea',
         subscribe_key : 'sub-c-8a9be808-8fb3-11e5-b303-0619f8945a4f'
     });
-    var ctrl = window.ctrl = CONTROLLER(phone);
 
-    ctrl.ready(function(){form.username.style.background="#55ff5b"; });
-    ctrl.receive(function(session){
-        session.connected(function(session) { video_out.appendChild(session.video);ctrl.addLocalStream(vid_thumb); showModal();});
-        session.ended(function(session) { video_out.innerHTML='';vid_thumb.innerHTML='';ctrl.getVideoElement(session.number).remove(); });
+
+    phone.ready(function(){form.username.style.background="#55ff5b"; });
+    phone.receive(function(session){
+        session.connected(function(session) { video_out.appendChild(session.video); showModal();});
+        session.ended(function(session) { video_out.innerHTML='';});
     });
     return false;
 }
