@@ -7,6 +7,7 @@ var video_out = document.getElementById("vid-box");
 var vid_thumb = document.getElementById("vid-thumb");
 
 function login(form) {
+    alert("here");
     var phone = window.phone = PHONE({
         number        : form.username.value || "Anonymous",
         publish_key   : 'pub-c-9df37493-406f-4ccd-8200-8ea58cb55aea',
