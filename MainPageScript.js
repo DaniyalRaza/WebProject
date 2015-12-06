@@ -13,7 +13,6 @@ function login(form) {
         subscribe_key : 'sub-c-8a9be808-8fb3-11e5-b303-0619f8945a4f'
     });
 
-
     phone.ready(function(){form.username.style.background="#55ff5b"; });
     phone.receive(function(session){
         session.connected(function(session) { video_out.appendChild(session.video); showModal();});
