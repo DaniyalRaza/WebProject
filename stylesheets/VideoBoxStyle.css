@@ -1,0 +1,12 @@
+#vid-box video{
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    max-width: auto;
+}
+body{
+    background-color: #eff1f1;
+}
+.bodyDiv{
+    text-align: center;
+}
